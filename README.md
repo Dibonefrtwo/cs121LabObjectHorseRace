@@ -1,4 +1,4 @@
-# cs120LabObjectHorseRace
+# cs121LabObjectHorseRace
 BSU CS 121 course: lab 4
 
 ## Horse::Horse()
