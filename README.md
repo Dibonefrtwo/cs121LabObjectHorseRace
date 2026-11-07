@@ -1,6 +1,57 @@
 # cs121LabObjectHorseRace
 BSU CS 121 course: lab 4
 
+## UML
+
+```mermaid
+classDiagram
+
+class Horse{
+ position:int
+ index:int
+ trackLength:int
+ Horse()
+ init(int index, int trackLength)
+ advance()
+ printLane()
+ isWiiner() bool
+}
+
+class Race{ 
+ TRACK_LENGTH:int
+ NUM_HORSES:int
+ Horse horses[HORSE_NUM]
+ Race()
+ advance()
+}
+
+Race --> Horse
+
+```
+
+## Race::Race()
+```
+const static int NUM_HORSES = 5
+const in TRACK_LENGTH = 15
+
+seed random generator
+
+initialize the horse array
+for each horse:
+  initialize with index and trackLength
+```
+
+## void Race::start()
+``` 
+bool keepGoing = true
+while keepGoing
+  for each horse:
+   advanace horse
+   print lane horse
+   isWinner horse
+    if winner keepGoing false
+```
+
 ## Horse::Horse()
 ```
 set position to 0 
@@ -40,25 +91,3 @@ if position >= trackLength
 return result
 ```
 
-## Race::Race()
-```
-const static int NUM_HORSES = 5 
-const in TRACK_LENGTH = 15 
-
-seed random generator 
-
-initialize the horse array 
-for each horse: 
-  initialize with index and trackLength 
-```
-
-## void Race::start()
-``` 
-bool keepGoing = trye 
-while keepGoing 
-  for each horse: 
-   advanace horse 
-   print lane horse 
-   isWinner horse 
-    if winner keepGoing false
-```
